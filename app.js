@@ -52,13 +52,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  var sumAandB = sum(a,b);
-  var sumPlusC = sum(sumAandB[0],c);
+  // var sumAandB = sum(a,b);
+  // var sumPlusC = sum(sumAandB[0],c);
 
-  var multAandB = multiply(a,b);
-  var multPlusC = multiply(multAandB[0],c);
+  // var multAandB = multiply(a,b);
+  // var multPlusC = multiply(multAandB[0],c);
 
-  return [sumPlusC[0], multPlusC[0], a + ' and ' + b + ' and ' + c + ' sum to ' + sumPlusC[0] + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multPlusC[0] + '.'];
+  // return [sumPlusC[0], multPlusC[0], a + ' and ' + b + ' and ' + c + ' sum to ' + sumPlusC[0] + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multPlusC[0] + '.'];
+var sumAnswer = sum( sum(a,b)[0], c)[0];
+var multAnswer = multiply( multiply(a,b)[0], c)[0];
+
+return [sumAnswer, multAnswer, `${a} and ${b} and ${c} sum to ${sumAnswer}.`, `The product of ${a} and ${b} and ${c} is ${multAnswer}.`];
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
